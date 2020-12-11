@@ -1,6 +1,12 @@
 ::selection {
     background-color: rgba(255,238,51,0.99);
 }
+a {
+    all: unset;
+}
+a:hover {
+    cursor: pointer;
+}
 .noDragging {
     -ms-user-select: none; 
     -moz-user-select: -moz-none;
@@ -19,6 +25,7 @@
     font-family: 'Hind', sans-serif;
     color:#474747;
     border-bottom: 1px solid #DEDEDE;
+    z-index: 100;
 }
 .header > .container {
     width: 89vw;
@@ -35,6 +42,12 @@ inline-block만 가운데로 정렬시킴 */
     float: left;
     font-size: 1.7rem;
     font-weight: 500;
+} 
+.title:hover {
+    cursor: pointer;
+}
+.title > a {
+    color:#3B3B3B;
 }
 .navContainer {
     display: inline-block;
@@ -47,12 +60,13 @@ inline-block만 가운데로 정렬시킴 */
     font-size: 1rem;
     height: 59px;
     font-weight: 400;
-    color:#474747;
+    color:#3B3B3B;
     margin: 0 13px;
 }
 .nav:hover {
     border-bottom-style: solid;
     border-width: 2px;
+    cursor: pointer;
 }
 .lang {
     float: right;
@@ -96,14 +110,16 @@ inline-block만 가운데로 정렬시킴 */
     width: calc(100vw - 160px);
 }
 .card {
+    position: relative;
     border-radius: 1.38888889vw;
-    margin-bottom: 3.47222222vw;
+    margin-bottom: 2.47222222vw;
     padding-top: 3.47222222vw;
     padding-right: 3.47222222vw;
     padding-bottom: 0;
     padding-left: 3.47222222vw;
     height: 40vw;
     background: #f4f4f4;
+    overflow: hidden;
 }
 .card > h2 {
     line-height: 3.5rem;
@@ -117,11 +133,88 @@ inline-block만 가운데로 정렬시킴 */
 }
 .cardLink:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 .card1 .photo {
-    height: 50%;
+    height: 70%;
     margin-top: 8vh;
-    background-image: url('../img/라이언.png');
+    background-image: url('../img/cardImg1.png');
     background-size: contain;
     background-repeat: no-repeat;
+}
+.card2 .photo {
+    position: absolute;
+    right: 5%;
+    left: auto;
+    top: auto;
+    width: 60%;
+    height: 60%;
+    margin-top: 0vh;
+    background-image: url('../img/cardImg2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 50;
+}
+.summary {
+    display: flex;
+    justify-content: center;
+}
+.summaryInfo {
+    width: 29%;
+    padding: 0 1%;
+}
+.summaryInfo a:hover .sumTitle {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sumMain {
+    padding-bottom: 1.5rem;
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+}
+.sumTitle {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #111;
+}
+.sumContent {
+    padding-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 200;
+    height: 40px;
+    color:#666;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+.numStock {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 32px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+}
+.descStock {
+    display: inline-block;
+    padding-left: 5px;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: red;
+}
+.stockDate {
+    padding-top: 28px;
+    font-size: 12px;
+    color: #1e1e1e;
+    clear: both;
+}
+.service {
+    display: flex;
+}
+.serviceInfo {
+    width: 33.33%;
 }
