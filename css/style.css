@@ -1,3 +1,13 @@
+::selection {
+    background-color: rgba(255,238,51,0.99);
+}
+.noDragging {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 .header {
     position: fixed;
     width: 100%;
@@ -8,27 +18,34 @@
     font-size: 1.4rem;
     font-family: 'Hind', sans-serif;
     color:#474747;
+    border-bottom: 1px solid #DEDEDE;
 }
-.header .container {
-    width: 92vw;
+.header > .container {
+    width: 89vw;
     margin: 0 auto;
+}
+.text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
 }
 /* block과 inline block을 구분하고 header에 text-align을 center로 정렬해서
 inline-block만 가운데로 정렬시킴 */
 .title {
     float: left;
-    margin-left: 20px;
     font-size: 1.7rem;
     font-weight: 500;
 }
 .navContainer {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 0;
 }
 .nav {
     display: inline-block;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    height: 59px;
     font-weight: 400;
     color:#474747;
     margin: 0 13px;
@@ -39,14 +56,15 @@ inline-block만 가운데로 정렬시킴 */
 }
 .lang {
     float: right;
-    font-size: 1rem;
+    font-size: 0;
 }
 .lang:hover {
     cursor: pointer;
 }
 .btn {
-    padding: 0 5px;
+    padding: 0 7px;
     font-weight: 300;
+    font-size: 1rem;
 }
 .btn:hover {
     font-weight: 500;
@@ -57,7 +75,53 @@ inline-block만 가운데로 정렬시킴 */
 .content {
     padding-top: 60px;
 }
-.content .main {
+.content > .main > .img {
     height: calc(100vh - 60px);
-    background-color: aquamarine;
+    background-image: url('../img/mainImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content > .main > .text {
+    position: absolute;
+    left: 9vw;
+    top: 28%;
+    line-height: 3.5rem;
+    color: white;
+}
+.cardContainer {
+    padding-top: 85px;
+    padding-right: 80px;
+    padding-bottom: 85px;
+    padding-left: 80px;
+    width: calc(100vw - 160px);
+}
+.card {
+    border-radius: 1.38888889vw;
+    margin-bottom: 3.47222222vw;
+    padding-top: 3.47222222vw;
+    padding-right: 3.47222222vw;
+    padding-bottom: 0;
+    padding-left: 3.47222222vw;
+    height: 40vw;
+    background: #f4f4f4;
+}
+.card > h2 {
+    line-height: 3.5rem;
+}
+.cardLink {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5vh;
+    font-size: 1.1rem;
+    color: #383838;
+}
+.cardLink:hover {
+    cursor: pointer;
+}
+.card1 .photo {
+    height: 50%;
+    margin-top: 8vh;
+    background-image: url('../img/라이언.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
