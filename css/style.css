@@ -27,17 +27,17 @@ a:hover {
     border-bottom: 1px solid #DEDEDE;
     z-index: 100;
 }
+/* block과 inline block을 구분하고 header에 text-align을 center로 정렬해서
+inline-block만 가운데로 정렬시킴 */
 .header > .container {
     width: 89vw;
     margin: 0 auto;
 }
 .text {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 2.75rem;
+    font-size: 3.5rem;
     font-weight: 700;
 }
-/* block과 inline block을 구분하고 header에 text-align을 center로 정렬해서
-inline-block만 가운데로 정렬시킴 */
 .title {
     float: left;
     font-size: 1.7rem;
@@ -99,7 +99,7 @@ inline-block만 가운데로 정렬시킴 */
     position: absolute;
     left: 9vw;
     top: 28%;
-    line-height: 3.5rem;
+    line-height: 4.5rem;
     color: white;
 }
 .cardContainer {
@@ -122,13 +122,13 @@ inline-block만 가운데로 정렬시킴 */
     overflow: hidden;
 }
 .card > h2 {
-    line-height: 3.5rem;
+    line-height: 4rem;
 }
 .cardLink {
     display: inline-flex;
     align-items: center;
     margin-top: 5vh;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: #383838;
 }
 .cardLink:hover {
@@ -187,9 +187,7 @@ inline-block만 가운데로 정렬시킴 */
     font-weight: 200;
     height: 40px;
     color:#666;
-    text-decoration: none;
     overflow: hidden;
-    text-overflow: ellipsis;
     word-break: keep-all;
 }
 .numStock {
@@ -214,7 +212,53 @@ inline-block만 가운데로 정렬시킴 */
 }
 .service {
     display: flex;
+    justify-content: center;
+    margin-top: 9vh;
+    margin-bottom: 10vh;
 }
 .serviceInfo {
-    width: 33.33%;
+    margin: 0 1%;
+    width: 29%;
+    height: 480px;
+}
+.serviceInfo > .photoContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: tomato;
+    border-radius: 2rem;
+}
+.serviceInfo .serviceMain {
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+.service .info2 .serviceMain {
+    color: white;
+}
+.serviceInfo > .textContainer {
+    margin-top: 40px;
+    width: 100%;
+    height: 130px;
+}
+.serviceInfo .serTitle {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #111;
+    word-break: keep-all;
+}
+.serviceInfo .serContent {
+    padding-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 200;
+    height: 40px;
+    color:#666;
+    overflow: hidden;
+    word-break: keep-all;
 }
