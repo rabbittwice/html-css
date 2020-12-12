@@ -207,6 +207,8 @@ inline-block만 가운데로 정렬시킴 */
 .stockDate {
     padding-top: 28px;
     font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 200;
     color: #1e1e1e;
     clear: both;
 }
@@ -225,8 +227,23 @@ inline-block만 가운데로 정렬시킴 */
     position: relative;
     width: 100%;
     height: 300px;
-    background-color: tomato;
+    background-color: rgba(255,238,51,0.99);
     border-radius: 2rem;
+}
+.info1 .photoContainer{
+    background-image: url('../img/service.jpg');
+    background-size: cover;
+}
+.info2 .photoContainer{
+    background-image: url('../img/tech.jpg');
+    background-size: cover;
+}
+.info3 .photoContainer{
+    background-image: url('../img/social.jpg');
+    background-size: cover;
+}
+.serviceInfo a:hover .serTitle {
+    text-decoration: underline;
 }
 .serviceInfo .serviceMain {
     font-family: 'Hind', sans-serif;
@@ -235,13 +252,13 @@ inline-block만 가운데로 정렬시킴 */
     top: 20px;
     left: 25px;
 }
-.service .info2 .serviceMain {
+.service .serviceMain {
     color: white;
 }
 .serviceInfo > .textContainer {
     margin-top: 40px;
     width: 100%;
-    height: 130px;
+    height: 120px;
 }
 .serviceInfo .serTitle {
     font-family: 'Noto Sans KR', sans-serif;
