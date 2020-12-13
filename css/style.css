@@ -58,14 +58,18 @@ inline-block만 가운데로 정렬시킴 */
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
-    height: 59px;
-    font-weight: 400;
+    height: 60px;
+    font-weight: 500;
     color:#3B3B3B;
-    margin: 0 13px;
+    padding: 0 13px;
+    text-underline-offset: 20px;
+}
+.nav5, .nav6 {
+    height: 59px;
+    text-underline-offset: 21px;
 }
 .nav:hover {
-    border-bottom-style: solid;
-    border-width: 2px;
+    text-decoration: solid underline #3B3B3B 2px;
     cursor: pointer;
 }
 .lang {
@@ -330,4 +334,87 @@ inline-block만 가운데로 정렬시킴 */
     right: 40px;
     font-size: 30px;
     color: #111;
+}
+
+/* header의 navigation 창들 */
+.openedNav {
+    display: none;
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    width: 100vw;
+    transform: translateY(-7px) translateX(-50%);
+    background-color: white;
+    border-top: 1px solid #DEDEDE;
+}
+.nav1:hover ~ .openedNav1 {
+    display: block;
+} 
+.nav2:hover ~ .openedNav2 {
+    display: block;
+}
+.nav3:hover ~ .openedNav3 {
+    display: block;
+}
+.nav4:hover ~ .openedNav4 {
+    display: block;
+}
+.openedNav1:hover {
+    display: block;
+}
+.openedNav2:hover {
+    display: block;
+}
+.openedNav3:hover {
+    display: block;
+}
+.openedNav4:hover {
+    display: block;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+    border-bottom: 1px solid #DEDEDE;
+}
+.flexBox3 {
+    height: 420px;
+}
+.menuContainer {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    font-size: 0px;
+}
+.openedNav a {
+    display: block;
+    font-size: 14px;
+    color: #1e1e1e;
+    height: 30px;
+    line-height: 19px;
+}
+.openedNav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.menus {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #DEDEDE;
+}
+.firstMenus {
+    border-left: 1px solid #DEDEDE;
+}
+.menus .main {
+    margin-top: 65px;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.menus .subLink {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
 }
