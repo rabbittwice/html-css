@@ -1,3 +1,6 @@
+.body {
+    word-break: keep-all;
+}
 ::selection {
     background-color: rgba(255,238,51,0.99);
 }
@@ -35,7 +38,7 @@ inline-block만 가운데로 정렬시킴 */
 }
 .text {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 3.5rem;
+    font-size: 3.75vw;
     font-weight: 700;
 }
 .title {
@@ -98,24 +101,26 @@ inline-block만 가운데로 정렬시킴 */
     background-image: url('../img/mainImg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 .content > .main > .text {
     position: absolute;
     left: 9vw;
     top: 28%;
-    line-height: 4.5rem;
+    line-height: 4.5vw;
     color: white;
 }
 .cardContainer {
-    padding-top: 85px;
-    padding-bottom: 85px;
-    margin: 0 auto;
-    width: calc(100vw - 180px);
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
 }
 .card {
     position: relative;
     border-radius: 1.38888889vw;
-    margin-bottom: 2.47222222vw;
+    margin-bottom: 4vw;
     padding-top: 3.47222222vw;
     padding-right: 3.47222222vw;
     padding-bottom: 0;
@@ -125,13 +130,13 @@ inline-block만 가운데로 정렬시킴 */
     overflow: hidden;
 }
 .card > h2 {
-    line-height: 4rem;
+    line-height: 4.5vw;
 }
 .cardLink {
     display: inline-flex;
     align-items: center;
-    margin-top: 5vh;
-    font-size: 1.4rem;
+    margin-top: 4vw;
+    font-size: 2vw;
     color: #383838;
 }
 .cardLink:hover {
@@ -139,24 +144,21 @@ inline-block만 가운데로 정렬시킴 */
     text-decoration: underline;
 }
 .card1 .photo {
-    height: 70%;
+    height: 55%;
     margin-top: 8vh;
     background-image: url('../img/cardImg1.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 .card2 .photo {
-    position: absolute;
-    right: 5%;
-    left: auto;
-    top: auto;
-    width: 60%;
-    height: 60%;
-    margin-top: 0vh;
+    position: block;
+    margin-left: 40vw;
+    bottom: 5%;
+    width: 60vw;
+    height: 20vw;
     background-image: url('../img/cardImg2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: 50;
 }
 .summary {
     display: flex;
@@ -232,6 +234,7 @@ inline-block만 가운데로 정렬시킴 */
     height: 300px;
     background-color: rgba(255,238,51,0.99);
     border-radius: 2rem;
+    cursor: pointer;
 }
 .info1 .photoContainer{
     background-image: url('../img/service.jpg');
@@ -302,11 +305,13 @@ inline-block만 가운데로 정렬시킴 */
 .copyContainer {
     line-height: 23px;
     margin-top: 3px;
+    word-break: keep-all;
 }
 .footer a {
     color: #666;
 }
 .linkInfo {
+    display: inline-block;
     padding-right: 16px;
 }
 .linkTxt {
@@ -327,13 +332,6 @@ inline-block만 가운데로 정렬시킴 */
     position: absolute;
     right: 0;
     font-size: 10px;
-}
-.topBtn {
-    position: fixed;
-    bottom: 60px;
-    right: 40px;
-    font-size: 30px;
-    color: #111;
 }
 
 /* header의 navigation 창들 */
@@ -385,15 +383,20 @@ inline-block만 가운데로 정렬시킴 */
 .menuContainer {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 100%;
+    margin: 0 20vw;
     height: 100%;
     font-size: 0px;
+}
+@media screen and (max-width: 1310px){
+    .menuContainer {
+        margin: 0 10vw;
+    }
 }
 .openedNav a {
     display: block;
     font-size: 14px;
     color: #1e1e1e;
-    height: 30px;
     line-height: 19px;
 }
 .openedNav a:hover {
@@ -404,17 +407,186 @@ inline-block만 가운데로 정렬시킴 */
     width: 100%;
     height: 100%;
     border-right: 1px solid #DEDEDE;
+    word-break: keep-all;
 }
 .firstMenus {
     border-left: 1px solid #DEDEDE;
 }
 .menus .main {
-    margin-top: 65px;
-    padding-bottom: 10px;
+    margin-top: 3.5vw;
+    margin-bottom: 17px;
     font-weight: 700;
 }
 .menus .subLink {
     font-size: 12px;
     font-weight: 700;
+    margin-bottom: 15px;
     color: #666;
+}
+input, .navBtn, .navBox, .bars, .times {
+    display: none;
+}
+
+/* 1080px 이하 화면 (1080px 부터 footer 영역의 요소들이 부딪힘)*/
+@media screen and (max-width: 1080px) {
+    .lang {
+        display: none;
+    }
+    .siteContainer {
+        display: none;
+    }
+    .nav1:hover ~ .openedNav1 {
+        display: none;
+    } 
+    .nav2:hover ~ .openedNav2 {
+        display: none;
+    }
+    .nav3:hover ~ .openedNav3 {
+        display: none;
+    }
+    .nav4:hover ~ .openedNav4 {
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    .navContainer {
+        display: none;
+    }
+    .content > .main {
+        transform: translateY(50px);
+        margin-bottom: 20%;
+    }
+    .content > .main > .img {
+        height: 100vw;
+    }
+    .content > .main > .text {
+        top: 20%;
+        font-size: 8vw;
+        line-height: 10vw;
+    }
+    .cardContainer {
+        margin-top: 25vw;
+    }
+    .card {
+        height: 40vw;
+        padding-top: 10vw;
+        background-color: white;
+    }
+    .card1 {
+        border-bottom: 1px solid #DEDEDE;
+    }
+    .card h2 {
+        font-size: 6vw;
+        line-height: 8vw;
+    }
+    .cardLink {
+        font-size: 4.5vw;
+    }
+    .card .photo {
+        display: none;
+    }
+    .header .title {
+        font-size: 24px;
+    }
+    .header {
+        height: 50px;
+    }
+    .content {
+        padding-top: 0;
+    }
+    .navBtn {
+        display: block;
+        position: fixed;
+        width: 1.7rem;
+        height: 1.7rem;
+        top: 15px;
+        right: 16.5px;
+        cursor: pointer;
+        z-index: 103;
+        background-color: rgba(192, 53, 53, 0);   
+    }
+    .bars {
+        display: block;
+        position: fixed;
+        width: 2rem;
+        height: 1.5rem;
+        top: 15px;
+        right: 10px;
+        font-size: 1.4rem;
+        color: #111;
+        z-index: 101;
+    }
+    .times {
+        display: none;
+        position: fixed;
+        width: 2rem;
+        height: 1.5rem;
+        top: 15px;
+        right: 10px;
+        font-size: 1.6rem;
+        color: rgb(255, 255, 255);
+        z-index: 102;
+    }
+    input {
+        position: fixed;
+    }
+    #navBtn:checked ~ .bars {
+        display: none;
+    }
+    #navBtn:checked ~ .times {
+        display: block;
+    }
+    #navBtn:checked ~ .navBox{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: #111;
+        color: white;
+        z-index: 101;
+        overflow: hidden;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .navBox .title {
+        margin-top: 20px;
+        margin-bottom: 70px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    .navBox a {
+        margin: 8px 25px;
+        margin-bottom: 20px;
+        height: 40px;
+        padding: 0 0;
+        color: white;
+        font-weight: 300;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .summary {
+        flex-direction: column;
+        align-items: center;
+    }
+    .summaryInfo {
+        width: 90%;
+        padding-bottom: 10vw;
+        padding-top: 10vw;
+        border-bottom: 1px solid #DEDEDE;
+        word-break: keep-all;
+    }
+    .service {
+        height: 30%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30vw;
+    }
+    .serviceInfo {
+        overflow: hidden;
+        width: 90%;
+    }
+    
 }
